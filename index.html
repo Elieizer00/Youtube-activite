@@ -3,70 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>YOUTUBE Active</title>
+    <title>YOUTUBE active</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h1>YOUTUBE active'ga xush kelibsiz!</h1>
     <p>Saytimiz orqali moliyaviy operatsiyalarni amalga oshiring.</p>
-    
+
     <h2>To'lov uchun:</h2>
-    <p>Karta raqami: 9860 2466 0286 8639</p>
+    <p>Karta raqami: <strong>9860 2466 0286 8639</strong></p>
 
-    <h2>Pulni Yechib Olish</h2>
-    <div>
-        <label for="withdrawAmount">Yechib olish mumkin bo'lgan summa:</label>
-        <input type="text" id="withdrawAmount" value="100,000 UZS" readonly>
-    </div>
+    <h2>Depozit kiritish:</h2>
+    <p>Hisob raqamingiz: <strong>9860 2466 0286 8639</strong></p>
+    <input type="number" id="depositAmount" placeholder="Depozit summasi">
+    <button onclick="makeDeposit()">Depozit qilish</button>
 
-    <div>
-        <label for="withdrawInput">Yechmoqchi bo'lgan summa:</label>
-        <input type="number" id="withdrawInput" placeholder="Summani kiriting">
-    </div>
+    <h2>Foyda yechib olish:</h2>
+    <input type="text" id="withdrawAccount" placeholder="Hisob raqamingizni kiriting">
+    <input type="number" id="withdrawAmount" placeholder="Yechib olish summasi">
+    <button onclick="withdrawProfit()">Yuborish</button> <!-- Tugma o'zgartirildi -->
 
-    <div>
-        <label for="withdrawCode">Yechib olish kodi:</label>
-        <input type="text" id="withdrawCode" placeholder="O'z kodingizni kiriting">
-    </div>
+    <h2>Dostlarni taklif qilish:</h2>
+    <input type="text" id="referralCode" placeholder="Dostning havolasi">
+    <input type="number" id="friendDeposit" placeholder="Dost kiritgan summasi">
+    <button onclick="inviteFriend()">Taklif qilish</button>
 
-    <div>
-        <h3>Hisob raqamingiz:</h3>
-        <p id="accountNumber">9860 2466 0286 8639</p>
-    </div>
+    <h2>Vazifalar:</h2>
+    <button onclick="completeTask()">Vazifani bajarish</button>
+    <div id="taskStatus"></div>
+    <div id="randomLink"></div> <!-- Tasodifiy havola ko'rsatish uchun -->
 
-    <button id="withdrawButton">Yechib olish</button>
+    <h2>Jami Foyda:</h2>
+    <p id="totalProfit">0 UZS</p>
 
-    <h2>Depozit Kiritish</h2>
-    <div>
-        <label for="depositAmount">Depozit miqdori:</label>
-        <input type="number" id="depositAmount" placeholder="Depozit miqdorini kiriting">
-    </div>
+    <h2>Qoidalar:</h2>
+    <p>1. Siz faqat foydangizni yechib olishingiz mumkin.</p>
+    <p>2. Vazifalarni bajarmasangiz, kunlik foyda hisoblanmaydi.</p>
+    <p>3. Pulni olib tashlaganingizda 24 soat ichida hisobingizga yetib keladi.</p>
+    <p>4. Har bir vazifa bajarish uchun YouTube'dan tasodifiy havola olinadi.</p>
 
-    <div>
-        <label for="depositCode">Depozit kodi:</label>
-        <input type="text" id="depositCode" placeholder="Depozit kodingizni kiriting">
-    </div>
-
-    <button id="depositButton">Depozit Qo'shish</button>
-
-    <h2>Vazifalar Bajarish</h2>
-    <div>
-        <label for="taskCode">Vazifa bajarish kodi:</label>
-        <input type="text" id="taskCode" placeholder="Vazifa bajarish kodingizni kiriting">
-    </div>
-
-    <button id="taskButton">Vazifani Bajarish</button>
-
-    <h2>Oltin Qoidalar</h2>
-    <p>Bizning asosiy maqsadimiz sizning YouTube kanalinizni rivojlantirish va "active" ni oshirishdir.</p>
-    <ul>
-        <li><strong>Vazifalarni bajarish:</strong> Har kuni berilgan vazifalarni bajarish orqali siz kanal faoliyatini oshirishingiz mumkin.</li>
-        <li><strong>Do'stlaringizni taklif qiling:</strong> Har bir obunachimiz do'stlarini taklif qilib, o'z kanalingizning ko'rinishini oshirishda yordam berishi mumkin.</li>
-        <li><strong>Yuqori sifatli kontent yarating:</strong> Har doim sifatli va qiziqarli kontent taqdim etishga harakat qiling.</li>
-        <li><strong>Fikrlar bilan aloqada bo'ling:</strong> Obunachilaringiz bilan fikr almashish orqali ularning qiziqishini oshirasiz.</li>
-        <li><strong>Pulni yechib olish:</strong> Pulni olib tashlaganingizda, 24 soat ichida hisobingizga o'tadi.</li>
-    </ul>
-    
     <script src="script.js"></script>
 </body>
 </html>
